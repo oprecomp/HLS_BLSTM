@@ -1,0 +1,1 @@
+g++ -W -Wall -Wwrite-strings -std=c++0x -Wextra -O2 -g -DGIT_VERSION=\"$(git --version | awk '{print $3}')\" -DNO_SYNTH -I/$XILINX_ROOT/Vivado_HLS/$XILINX_VERSION/include -I../../../software/include -I../include  -o main snap_blstm.cpp ../../../software/lib/libsnap.a ../../../../pslse/libcxl/libcxl.a -lpthread
