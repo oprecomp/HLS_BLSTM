@@ -1,7 +1,7 @@
-# HLS_BLSTM
+# HLS_BLSTM (community edition)
 A BLSTM FPGA accelerator of an OCR application, using CAPI/SNAP.
 
-- This is the source code for the FPGA accelerator for the blstm microbenchmark of [OPRECOMP project](http://oprecomp.eu/). It includes the host code software (C/C++) and the FPGA synthesizable code (C/C++).
+- This is the source code for the FPGA accelerator of the blstm microbenchmark of [OPRECOMP project](http://oprecomp.eu/). It includes the host code software (C/C++) and the FPGA synthesizable code (C/C++).
 
 - This SNAP example is transforming scanned images of text (in PNG format) to characters, using the Bidirectional Long Short-term Memory (BLSTM) Recurrent Neural Network (RNN) algorithm.
   - code can be executed on the CPU (will transform all images to characters), using OpenMP for speedup.
@@ -19,6 +19,9 @@ A BLSTM FPGA accelerator of an OCR application, using CAPI/SNAP.
 
 
 ![alt text](./var/hls_blstm.png "Overview of hls_blstm architecture.")
+
+## Community edition note
+This version serves as an example for the SNAP community and it is not including the complete optimization setup (advanced memory interleaving and unrolling). Please contact [OPRECOMP project](http://oprecomp.eu/) for more information of the optimized version.
 
 
 ## Getting started
