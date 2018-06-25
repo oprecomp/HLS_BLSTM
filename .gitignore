@@ -1,0 +1,52 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Vivado
+*.apc/
+*.settings/
+*.vivado_hls_log_all.xml
+*.log
+
+# BLSTM project specific
+hls/data
+hls/hls_wrapped_blstm_prj/Debug/
+hls/hls_wrapped_blstm_prj/solution1/
+hls/src/generate_luts
+hls/src/lut.h
+hls/src/main
+hw/hlsBLSTM_xcku060-ffva1156-2-e/
+sw/snap_helloworld
+hw/generate_luts
+hw/lut.h
+hw/main
+snap_blstm
+run_hls_script.tcl
+callgrind*
+
