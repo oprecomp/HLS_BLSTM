@@ -1,8 +1,7 @@
 /****************************************************************************
-   Copyright 2018 - The OPRECOMP Project Consortium,
-                    IBM Research GmbH,
-										University of Kaiserslautern - Microelectronic Systems
-										Design Research Group, All rights reserved.
+   Copyright 2017 - The OPRECOMP Project Consortium,
+                    IBM Research GmbH, University of Kaiserslautern, 
+                    All rights reserved.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

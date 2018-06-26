@@ -1,7 +1,8 @@
 /****************************************************************************
-   Copyright 2018 - The OPRECOMP Project Consortium,
-                    IBM Research GmbH. All rights reserved.
-
+   Copyright 2017 - The OPRECOMP Project Consortium,
+                    IBM Research GmbH, University of Kaiserslautern, 
+                    All rights reserved.
+                    
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
@@ -17,7 +18,8 @@
 
 /**
  * @file snap_blstm.cpp
- * @author Dionysios Diamantopoulos, did@zurich.ibm.com
+ * @author Dionysios Diamantopoulos, did@zurich.ibm.com, FPGA and PULP porting
+ * @author Vladimir Rybalkin, rybalkin@eit.uni-kl.de, BLSTM code
  * @date 10 Dec 2017
  * @brief Getting data from image datasets into the FPGA, process it using a SNAP
  * action and a BLSTM accelerator and move the data out of the FPGA back to host-DRAM.

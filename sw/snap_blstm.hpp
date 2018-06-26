@@ -1,7 +1,8 @@
 /****************************************************************************
-   Copyright 2018 - The OPRECOMP Project Consortium,
-                    IBM Research GmbH. All rights reserved.
-
+   Copyright 2017 - The OPRECOMP Project Consortium,
+                    IBM Research GmbH, University of Kaiserslautern, 
+                    All rights reserved.
+                    
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
@@ -17,7 +18,8 @@
 
 /**
  * @file snap_blstm.hpp
- * @author Dionysios Diamantopoulos, did@zurich.ibm.com
+ * @author Dionysios Diamantopoulos, did@zurich.ibm.com, FPGA and PULP porting
+ * @author Vladimir Rybalkin, rybalkin@eit.uni-kl.de, BLSTM code
  * @date 10 Dec 2017
  * @brief Header file of  snap_blstm.cpp and definitions from ../hw/newron.cpp :
  * keeping only stuff for host code, avoiding VHLS-related.

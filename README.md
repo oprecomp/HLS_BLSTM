@@ -118,10 +118,12 @@ The HLS_BLSTM source code is automatically documented with Doxygen. Run `make do
 
 ## Cite
 The presetnt work may be referred by the following citation:
-`D. Diamantopoulos, H. Giefers and C. Hagleitner, "ecTALK: Energy efficient coherent transprecision accelerators — The bidirectional long short-term memory neural network case,"` 2018 IEEE Symposium in Low-Power and High-Speed Chips (COOL CHIPS), Yokohama, Japan, 2018, pp. 1-3. doi: 10.1109/CoolChips.2018.8373077, URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8373077&isnumber=8373063
+`D. Diamantopoulos, H. Giefers and C. Hagleitner, "ecTALK: Energy efficient coherent transprecision accelerators — The bidirectional long short-term memory neural network case,"` 2018 IEEE Symposium in Low-Power and High-Speed Chips (COOL CHIPS), Yokohama, Japan, 2018, pp. 1-3. doi: 10.1109/CoolChips.2018.8373077, [URL](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8373077&isnumber=8373063).
+
+The original software BLSTM code may be referred by the following citation: `V. Rybalkin, N. Wehn, M. R. Yousefi and D. Stricker, "Hardware architecture of Bidirectional Long Short-Term Memory Neural Network for Optical Character Recognition,"` Design, Automation & Test in Europe Conference & Exhibition (DATE), 2017, Lausanne, 2017, pp. 1390-1395. doi: 10.23919/DATE.2017.7927210, [URL](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7927210&isnumber=7926947).
 
 ## Acknowledgement
-The original BLSTM software code of this example has been coded by [Vladimir Rybalkin](rybalkin@eit.uni-kl.de). It was provided by the Microelectronic Systems Design Research Group, University of Kaiserslautern, as part of the [OPRECOMP](http://oprecomp.eu/) microbenchmark suite.
+The original BLSTM software code of this example has been coded by Vladimir Rybalkin. It was provided by the Microelectronic Systems Design Research Group, University of Kaiserslautern, as part of the [OPRECOMP](http://oprecomp.eu/) microbenchmark suite.
 
 ## Next steps
 The hls_blstm demonstrator has been already tested on the ADM-PCIE-KU3 device (FPGA XCKU060-FFVA1156), attached a POWER8 host, on IBM Zurich Heterogeneous Cloud (ZHC2) cloud. Future milestones are:
