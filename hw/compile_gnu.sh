@@ -1,0 +1,1 @@
+g++ -g -fopenmp -o main -DNO_SYNTH -I../../include -I../../../software/include -I../../../software/examples -I../include -I/$XILINX_ROOT/Vivado/$XILINX_VERSION/include -I/$XILINX_ROOT/Vivado_HLS/$XILINX_VERSION/include -std=c++0x neuron.cpp action_hls.cpp action_blstm_tb.cpp
