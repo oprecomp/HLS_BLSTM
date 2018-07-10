@@ -1,0 +1,3 @@
+../../../../software/tools/snap_maint -vvv
+../../../../actions/hls_blstm/sw/snap_blstm -i ../../../../actions/hls_blstm/data/samples_c/ -g ../../../../actions/hls_blstm/data/gt_1/
+

@@ -1,0 +1,9 @@
+
+#exapple with ipmitool
+watch ipmitool -D LAN -H corvey-bmc -L USER -U monitor -P monitor dcmi power reading
+
+#example with ipmitool - continuous Watt reading
+while true; do ipmitool -D LAN -H corvey-bmc -L USER -U monitor -P monitor dcmi power reading | grep Instantaneous | awk '{print $4}'; sleep 0.5; done
+
+# example with amester tool
+/tools/projects/amester/bin/amester-7.0-USER /tools/projects/oprecomp_local/common/host/ServerAmesterMeasurements.tcl corvey-bmc monitor monitor 9999
