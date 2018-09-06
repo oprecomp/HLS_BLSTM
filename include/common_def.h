@@ -96,6 +96,12 @@
   * */
 //#define UNIQUE_WEIGHT_ROMS
 
+/*!
+ * \def DUMP_TRIG_VALUES
+ * Macro for enabling code snippet that trigonometric prints variables (for creating LUTs).
+ * */
+#define DUMP_TRIG_VALUES 0
+
 
 
 #ifdef __cplusplus /* Fixed-point only for HLS code, not for x86/POWER host code */

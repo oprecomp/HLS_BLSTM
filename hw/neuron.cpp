@@ -1722,12 +1722,13 @@ void TranslateBack(
 		return numThreads;
 	}
 
-
+#if DUMP_TRIG_VALUES == 1
 static long get_nanos(void) {
     struct timespec ts;
     timespec_get(&ts, TIME_UTC);
     return (long)ts.tv_sec * 1000000000L + ts.tv_nsec;
 }
+#endif
 
 #ifndef EMULATING_IO_SINGLE_KERNEL_BLSTM
 	void dumpTrigonometricValues() {

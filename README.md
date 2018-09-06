@@ -57,7 +57,7 @@ git clone https://github.ibm.com/DID/hls_blstm <SNAP_ROOT>/actions/hls_blstm
 ```Bash
 cd <SNAP_ROOT>/actions/hls_blstm/sw
 make
-SNAP_CONFIG=CPU ./snap_blstm -i ../data/samples_1/ -g ../data/gt_1/
+LD_LIBRARY_PATH=$PSLSE_ROOT/libcxl/ SNAP_CONFIG=CPU ./snap_blstm -i ../data/samples_1/ -g ../data/gt_1/
 ```
 
 * Run simulation of the hardware version (only on x86)

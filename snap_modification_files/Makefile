@@ -36,6 +36,8 @@ $(error Please make sure that $$SNAP_ROOT is set up correctly.)
 endif
 endif
 
+all: clean copy
+
 copy:
 	cp -f ./ActionTypes.md ${SNAP_ROOT}/ActionTypes.md
 	cp -f ./hls.mk ${SNAP_ROOT}/actions/hls.mk
