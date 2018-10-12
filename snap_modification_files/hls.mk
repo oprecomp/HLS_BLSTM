@@ -21,11 +21,13 @@
 #FPGACHIP    ?= xcku060-ffva1156-2-e
 CONFIG_FILE = $(SNAP_ROOT)/.snap_config
 ifneq ("$(wildcard $(CONFIG_FILE))","")
-  FPGACHIP = $(shell grep FPGACHIP $(CONFIG_FILE) | cut -d = -f 2)
-  $(info FPGACHIP is set to $(FPGACHIP).)
+  FPGACHIP = $(shell grep FPGACHIP $(CONFIG_FILE) | cut -d = -f 2 | tr -d '"')
+#  $(info FPGACHIP is set to $(FPGACHIP).)
 endif
 
 PART_NUMBER ?= $(FPGACHIP)
+
+HLS_CFLAGS ?= ""
 
 # The wrapper name must match a function in the HLS sources which is
 # taken as entry point for the HDL generation.
@@ -39,6 +41,8 @@ objs = $(srcs:.cpp=.o)
 CXX = g++
 CXXFLAGS = -Wall -W -Wextra -Werror -O2 -DNO_SYNTH -Wno-unknown-pragmas -I../include
 
+.PHONY: $(symlinks)
+
 all: $(syn_dir) check
 
 $(syn_dir): $(srcs) run_hls_script.tcl
@@ -47,7 +51,7 @@ $(syn_dir): $(srcs) run_hls_script.tcl
 
 # Create symlinks for simpler access
 $(symlinks): $(syn_dir)
-	@ln -sf $(syn_dir)/$@ $@
+	@$(RM) hls_syn_$@ && ln -s $(syn_dir)/$@ hls_syn_$@
 
 run_hls_script.tcl: $(SNAP_ROOT)/actions/scripts/create_run_hls_script.sh
 	$(SNAP_ROOT)/actions/scripts/create_run_hls_script.sh	\
@@ -56,7 +60,8 @@ run_hls_script.tcl: $(SNAP_ROOT)/actions/scripts/create_run_hls_script.sh
 		-w $(WRAPPER)			\
 		-p $(PART_NUMBER)		\
 		-f "$(srcs)" 			\
-		-s $(SNAP_ROOT) > $@
+		-s $(SNAP_ROOT) 		\
+		-x $(HLS_CFLAGS) > $@
 
 $(SOLUTION_NAME): $(objs)
 	$(CXX) -o $@ $^
@@ -85,3 +90,4 @@ check: $(syn_dir)
 clean:
 	@$(RM) -r $(SOLUTION_DIR)* run_hls_script.tcl *~ *.log \
 		$(objs) $(SOLUTION_NAME)
+	@for link in $(symlinks); do $(RM) hls_syn_$(link); done
