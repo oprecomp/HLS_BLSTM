@@ -36,12 +36,30 @@ $(error Please make sure that $$SNAP_ROOT is set up correctly.)
 endif
 endif
 
-all: clean copy
+all: clean dirs copy_snap_files copy_vivado_files
 
-copy:
+dirs: 
+	mkdir -p ../third-party
+	mkdir -p ../third-party/xilinx
+
+copy_snap_files:
 	cp -f ./ActionTypes.md ${SNAP_ROOT}/ActionTypes.md
 	cp -f ./hls.mk ${SNAP_ROOT}/actions/hls.mk
 	cp -f ./Kconfig ${SNAP_ROOT}/scripts/Kconfig
 	cp -f ./snap_env ${SNAP_ROOT}/snap_env
+
+copy_vivado_files:
+	cp -f ${XILINX_VIVADO}/include/ap_int.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/ap_int_sim.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/ap_common.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/ap_int_special.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/floating_point_v7_0_bitacc_cmodel.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/gmp.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/hls_fpo.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/hls_half.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/mpfr.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/ap_int.h ../sw/third-party/xilinx/
+	cp -f ${XILINX_VIVADO}/include/ap_int.h ../sw/third-party/xilinx/
+	cp -f -r ${XILINX_VIVADO}/include/etc/ ../sw/third-party/xilinx/
 
 clean:
