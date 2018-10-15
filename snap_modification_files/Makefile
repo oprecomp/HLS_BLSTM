@@ -39,8 +39,8 @@ endif
 all: clean dirs copy_snap_files copy_vivado_files
 
 dirs: 
-	mkdir -p ../third-party
-	mkdir -p ../third-party/xilinx
+	mkdir -p ../sw/third-party
+	mkdir -p ../sw/third-party/xilinx
 
 copy_snap_files:
 	cp -f ./ActionTypes.md ${SNAP_ROOT}/ActionTypes.md
