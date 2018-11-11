@@ -9,7 +9,7 @@ curl --form "filename=fw_2018_1016_1603_noSDRAM_ADKU3_25.bin" --form username=a"
 ssh opuser@10.12.1.135 (assuming an openVPN tunneling)
 
 # Steps to do on the new VM to run hls_blstm on FPGA
-sudo apt-get update
+```sudo apt-get update
 sudo apt-get install g++
 cd ~
 git clone https://github.com/open-power/snap.git
@@ -23,3 +23,4 @@ SNAP_CONFIG=FPGA make
 sudo chmod 777 /dev/cxl/afu0.0*
 ../../../software/tools/snap_maint -vvv
 SNAP_CONFIG=FPGA ./snap_blstm -i ../data/samples_1/ -g ../data/gt_1/
+```
