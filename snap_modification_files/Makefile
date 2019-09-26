@@ -36,9 +36,13 @@ $(error Please make sure that $$SNAP_ROOT is set up correctly.)
 endif
 endif
 
-all: clean dirs copy_snap_files copy_vivado_files
+all: clean checkgit dirs copy_snap_files copy_vivado_files
 
-dirs: 
+checkgit: 
+	cd ../../../; \
+	git checkout 2fb8fb85f9a6ec7bdbf837522c8ce839e87de281
+
+dirs:
 	mkdir -p ../sw/third-party
 	mkdir -p ../sw/third-party/xilinx
 
@@ -61,5 +65,12 @@ copy_vivado_files:
 	cp -f ${XILINX_VIVADO}/include/ap_int.h ../sw/third-party/xilinx/ | true
 	cp -f ${XILINX_VIVADO}/include/ap_int.h ../sw/third-party/xilinx/ | true
 	cp -f -r ${XILINX_VIVADO}/include/etc/ ../sw/third-party/xilinx/ | true
-
+	cp -f ${XILINX_VIVADO}/include/ap_decl.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_int_base.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_int_ref.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_fixed.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_fixed_base.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_fixed_ref.h ../sw/third-party/xilinx/ | true
+	cp -f ${XILINX_VIVADO}/include/ap_fixed_special.h ../sw/third-party/xilinx/ | true
+	
 clean:

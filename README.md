@@ -29,7 +29,7 @@ This version serves as an example for the SNAP community and it is not including
 
   * Clone the directory on you SNAP's action folder
 ```Bash
-git clone https://github.ibm.com/DID/hls_blstm <SNAP_ROOT>/actions/hls_blstm
+git clone https://github.com/oprecomp/HLS_BLSTM.git <SNAP_ROOT>/actions/hls_blstm
 ```
   * Add the related section of HLS_BLSTM into SNAP, by replacing some files. A script is batching the copying.
   ```Bash
@@ -51,6 +51,11 @@ git clone https://github.ibm.com/DID/hls_blstm <SNAP_ROOT>/actions/hls_blstm
   ```Bash
   cd <SNAP_ROOT>
   make snap_config (In the ncurses menu select HLS_BLSTM)
+  ```
+  * Latest supported [snap version:](https://github.com/open-power/snap/commit/2fb8fb85f9a6ec7bdbf837522c8ce839e87de281)
+  ```Bash
+  cd <SNAP_ROOT>
+  git checkout 2fb8fb85f9a6ec7bdbf837522c8ce839e87de281
   ```
 
 * Run the software version (either on x86 or POWER8/9)
@@ -95,6 +100,7 @@ sudo SNAP_CONFIG=FPGA ./snap_blstm -i ../data/samples_1/ -g ../data/gt_1/ -C0
 As of now, the following FPGA card has been used with HLS_BLSTM:
 
 *  [Alpha-Data ADM-PCIE-KU3](http://www.alpha-data.com/dcp/products.php?product=adm-pcie-ku3)
+*  [Alpha-Data AAADM-PCIE-9V3](https://www.alpha-data.com/dcp/products.php?product=adm-pcie-9v3)
 
 ### ii. Development
 #### a) SNAP
